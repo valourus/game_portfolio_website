@@ -4,11 +4,15 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+	<transition name="page fade" mode="out-in" enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutDown">
     <router-view/>
+	</transition>
   </div>
 </template>
 
 <style lang="stylus">
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"
+
 #app
   font-family 'Avenir', Helvetica, Arial, sans-serif
   -webkit-font-smoothing antialiased
