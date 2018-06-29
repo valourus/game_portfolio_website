@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ localMsg }}</h1>
+    <input type="checkbox" v-model="isChecked">
+    {{ isChecked }}
     <p>
       For guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -31,27 +33,34 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-
 @Component
 export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
+  @Prop() msg!: String;
+  localMsg: String;
+  isChecked: Boolean;
+
+  constructor() {
+    super();
+    this.isChecked = true;
+    this.localMsg = this.msg;
+    this.localMsg = "yeet";
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style scoped lang="stylus">
+h3
+  margin 40px 0 0
+
+ul
+  list-style-type none
+  padding 0
+
+li
+  display inline-block
+  margin 0 10px
+
+a
+  color #42b983
 </style>
