@@ -21,7 +21,6 @@
   color #2c3e50
 
 #nav
-  padding 30px
   a
     font-weight bold
     color #2c3e50
@@ -35,18 +34,4 @@ body {
     height: calc(100% - 50px);
   }
 
-  #app {
-    background #fff;
-    width 50%;
-    padding 30px;
-    border-radius 10px;
-    margin 50px auto 0 auto;
-    height calc(60% - 50px);
-  }
-
-.page {
-    position fixed;
-    width inherit;
-  }
-  
 </style>
