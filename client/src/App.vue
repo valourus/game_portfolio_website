@@ -27,26 +27,10 @@
     color #2c3e50
     &.router-link-exact-active
       color #42b983
-body {
-    background: rgb(233, 233, 233);
-    font-family:Arial, Helvetica, sans-serif;
-  }
-  html, body {
-    height: calc(100% - 50px);
-  }
-
-  #app {
-    background #fff;
-    width 50%;
-    padding 30px;
-    border-radius 10px;
-    margin 50px auto 0 auto;
-    height calc(60% - 50px);
-  }
 
 .page {
     position fixed;
-    width inherit;
+    width 99%;
   }
   
 </style>
