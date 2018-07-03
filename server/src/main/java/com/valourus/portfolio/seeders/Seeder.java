@@ -1,4 +1,4 @@
-package portfolio.seeders;
+package com.valourus.portfolio.seeders;
 
 import com.github.javafaker.Faker;
 import org.springframework.beans.factory.annotation.Autowired;

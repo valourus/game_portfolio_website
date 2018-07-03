@@ -1,10 +1,10 @@
-package portfolio.seeders;
+package com.valourus.portfolio.seeders;
 
 import com.github.javafaker.Faker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import portfolio.models.GamePage;
-import portfolio.repos.GamePageRepository;
+import com.valourus.portfolio.models.GamePage;
+import com.valourus.portfolio.repos.GamePageRepository;
 
 @Component
 public class GamePageSeeder implements TableSeeder {

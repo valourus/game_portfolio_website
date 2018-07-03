@@ -1,4 +1,4 @@
-package portfolio.models;
+package com.valourus.portfolio.models;
 
 import javax.persistence.*;
 
