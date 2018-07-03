@@ -3,22 +3,22 @@ package com.valourus.portfolio.seeders;
 import com.github.javafaker.Faker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import com.valourus.portfolio.models.GamePage;
-import com.valourus.portfolio.repos.GamePageRepository;
+import com.valourus.portfolio.models.Game;
+import com.valourus.portfolio.repos.GameRepository;
 
 @Component
-public class GamePageSeeder implements TableSeeder {
+public class GameSeeder implements TableSeeder {
 
     @Autowired
-    private GamePageRepository gamePageRepository;
+    private GameRepository gameRepository;
 
     @Override
     public void seed(Faker faker) {
-        for(int i = 0;i < 5;i++) {
-            GamePage gp = new GamePage();
+        for(int i = 0;i < Seeder.AMOUNT_OF_GAMES;i++) {
+            Game gp = new Game();
             gp.setName( faker.name().fullName() );
             gp.setDescription( faker.lorem().paragraph() );
-            gamePageRepository.save(gp);
+            gameRepository.save(gp);
         }
     }
 }

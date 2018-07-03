@@ -10,11 +10,18 @@ import org.springframework.stereotype.Component;
 public class Seeder {
 
     @Autowired
-    private GamePageSeeder gamePageSeeder;
+    private GameSeeder gameSeeder;
+    @Autowired
+    private ImageSeeder imageSeeder;
+
+    static final int AMOUNT_OF_GAMES = 5;
+    static final int IMAGES_PER_GAME = 2;
 
     @EventListener
     public void onApplicationEvent(ContextRefreshedEvent event) {
         Faker faker = new Faker();
-        gamePageSeeder.seed(faker);
+
+        gameSeeder.seed(faker);
+        imageSeeder.seed(faker);
     }
 }

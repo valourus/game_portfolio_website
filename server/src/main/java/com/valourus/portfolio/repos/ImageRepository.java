@@ -1,10 +1,9 @@
 package com.valourus.portfolio.repos;
 
+import com.valourus.portfolio.models.Image;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.valourus.portfolio.models.GamePage;
 
 @Repository
-public interface GamePageRepository extends JpaRepository<GamePage, Integer> {
-
+public interface ImageRepository extends JpaRepository<Image, Integer> {
 }

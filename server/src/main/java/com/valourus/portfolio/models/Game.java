@@ -1,20 +1,27 @@
 package com.valourus.portfolio.models;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity()
-@Table( name = "game_pages")
-public class GamePage {
+@Table( name = "t_game_pages")
+public class Game {
 
     @Id
     @GeneratedValue
     private int id;
 
+    @Column( name = "c_name")
     private String name;
 
+    @Column( name = "c_description")
     private String description;
 
-    public GamePage() {
+    @Column( name = "c_game_images")
+    @OneToMany( mappedBy = "game")
+    private Set<Image> images;
+
+    public Game() {
     }
 
     public int getId() {
@@ -39,5 +46,13 @@ public class GamePage {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Set<Image> getImages() {
+        return images;
+    }
+
+    public void setImages(Set<Image> images) {
+        this.images = images;
     }
 }
