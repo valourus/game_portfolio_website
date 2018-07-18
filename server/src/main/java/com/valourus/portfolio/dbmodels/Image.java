@@ -1,8 +1,9 @@
-package com.valourus.portfolio.models;
+package com.valourus.portfolio.dbmodels;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
+import java.sql.Blob;
 
 @Entity
 @Table( name = "t_images")
@@ -12,13 +13,14 @@ public class Image {
     @GeneratedValue
     private int id;
 
-    @Column( name = "c_url")
-    private String url;
+    @Lob
+    @Column( name = "c_file")
+    private Blob image;
 
     @ManyToOne
     @JoinColumn (name="c_game_id")
     @JsonBackReference
-    private Game game;
+    private GameData game;
 
     public int getId() {
         return id;
@@ -28,19 +30,19 @@ public class Image {
         this.id = id;
     }
 
-    public String getUrl() {
-        return url;
+    public Blob getImage() {
+        return image;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setImage(Blob url) {
+        this.image = url;
     }
 
-    public Game getGame() {
+    public GameData getGame() {
         return game;
     }
 
-    public void setGame(Game game) {
+    public void setGame(GameData game) {
         this.game = game;
     }
 }

@@ -1,11 +1,11 @@
-package com.valourus.portfolio.models;
+package com.valourus.portfolio.dbmodels;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity()
 @Table( name = "t_game_pages")
-public class Game {
+public class GameData {
 
     @Id
     @GeneratedValue
@@ -21,7 +21,7 @@ public class Game {
     @OneToMany( mappedBy = "game")
     private Set<Image> images;
 
-    public Game() {
+    public GameData() {
     }
 
     public int getId() {
